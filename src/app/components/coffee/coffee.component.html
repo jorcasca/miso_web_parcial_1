@@ -1,3 +1,32 @@
-<p>
-  coffee works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th class="h4">#</th>
+          <th class="h4">Nombre</th>
+          <th class="h4">Tipo</th>
+          <th class="h4">Región</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let coffee of coffeeList">
+          <td>
+            <dd>
+              <b>{{ coffee.id }}</b>
+            </dd>
+          </td>
+          <td>
+            <dd>{{ coffee.nombre }}</dd>
+          </td>
+          <td>
+            <dd>{{ coffee.tipo }}</dd>
+          </td>
+          <td>
+            <dd>{{ coffee.region }}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
