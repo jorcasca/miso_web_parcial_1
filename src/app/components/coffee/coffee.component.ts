@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICoffee } from 'src/app/interfaces/coffee.interface';
+import { ICoffee, CoffeeType } from 'src/app/interfaces/coffee.interface';
 import { CoffeeService } from 'src/app/services/coffee/coffee.service';
 
 @Component({
@@ -16,9 +16,16 @@ export class CoffeeComponent implements OnInit {
     this.getCoffeeList();
   }
 
-  getCoffeeList() {
+  totalOriginCoffee = () => this.totalTypeCoffee(CoffeeType.ORIGIN);
+
+  totalBlendCoffee = () => this.totalTypeCoffee(CoffeeType.BLEND);
+
+  getCoffeeList = () => {
     this.coffeeService.getCoffeeList().subscribe((coffeeList) => {
       this.coffeeList = coffeeList;
     });
-  }
+  };
+
+  totalTypeCoffee = (type: CoffeeType) =>
+    this.coffeeList.filter((coffee) => coffee.tipo == type).length;
 }

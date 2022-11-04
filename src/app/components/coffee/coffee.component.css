@@ -1,0 +1,28 @@
+.container {
+  margin-top: 1rem;
+  justify-content: space-around;
+
+}
+
+.image-container {
+  margin-bottom: 2rem;
+}
+
+.table {
+  font-size: 18px;
+}
+
+.summary-container {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.footer-container {
+  margin-top: 2rem;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}

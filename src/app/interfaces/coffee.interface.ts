@@ -7,3 +7,8 @@ export interface ICoffee {
   altura: number;
   imagen: string;
 }
+
+export enum CoffeeType {
+  ORIGIN = 'Café de Origen',
+  BLEND = 'Blend'
+}
