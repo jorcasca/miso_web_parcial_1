@@ -1,32 +1,47 @@
-<div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead class="table-dark">
-        <tr>
-          <th class="h4">#</th>
-          <th class="h4">Nombre</th>
-          <th class="h4">Tipo</th>
-          <th class="h4">Región</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let coffee of coffeeList">
-          <td>
-            <dd>
-              <b>{{ coffee.id }}</b>
-            </dd>
-          </td>
-          <td>
-            <dd>{{ coffee.nombre }}</dd>
-          </td>
-          <td>
-            <dd>{{ coffee.tipo }}</dd>
-          </td>
-          <td>
-            <dd>{{ coffee.region }}</dd>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+<div class="container">
+  <div class="image-container">
+    <img src="./assets/images/banner.jpg" alt="image-banner" />
   </div>
+
+  <div class="container-fluid">
+    <div class="col-8">
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th class="h4">#</th>
+            <th class="h4">Nombre</th>
+            <th class="h4">Tipo</th>
+            <th class="h4">Región</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let coffee of coffeeList">
+            <td>
+              <dd>
+                <b>{{ coffee.id }}</b>
+              </dd>
+            </td>
+            <td>
+              <dd>{{ coffee.nombre }}</dd>
+            </td>
+            <td>
+              <dd>{{ coffee.tipo }}</dd>
+            </td>
+            <td>
+              <dd>{{ coffee.region }}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="summary-container">
+    <div>Total café de origen: {{ totalOriginCoffee() }}</div>
+    <div>Total café blend: {{ totalBlendCoffee() }}</div>
+  </div>
+
+  <footer class="footer-container">
+    <p>Contact us: +57 3102105253 - info@elaromamagico.com - @elaromamagico</p>
+  </footer>
 </div>
